@@ -3,29 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to MCP Test</title>
+    <title>Dave Fetterman - Technology Leader</title>
     <style>
+        :root {
+            --harvard-crimson: #A51C30;
+            --harvard-crimson-dark: #841725;
+            --harvard-crimson-light: #C4495B;
+            --off-white: #F8F8F8;
+            --light-gray: #E5E5E5;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Crimson Text", Georgia, serif;
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f5f5f5;
-        }
-        h1 {
+            background-color: var(--off-white);
             color: #333;
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
         }
+        
+        h1, h2 {
+            font-family: "Hoefler Text", "Baskerville", serif;
+            color: var(--harvard-crimson);
+            text-align: center;
+            border-bottom: 2px solid var(--harvard-crimson);
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            letter-spacing: 0.05em;
+        }
+        
         p {
             line-height: 1.6;
+            font-size: 1.1em;
+        }
+        
+        section {
+            margin: 40px 0;
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(165, 28, 48, 0.1);
+            border: 1px solid var(--light-gray);
+            transition: all 0.3s ease;
+        }
+        
+        section:hover {
+            border-color: var(--harvard-crimson);
+            box-shadow: 0 4px 8px rgba(165, 28, 48, 0.2);
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .skill-tag {
+            background-color: var(--harvard-crimson);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background-color 0.3s ease;
+        }
+        
+        .skill-tag:hover {
+            background-color: var(--harvard-crimson-dark);
+        }
+        
+        .contact-info {
+            text-align: center;
+            margin-top: 20px;
+            font-family: "Hoefler Text", "Baskerville", serif;
+            font-size: 1.2em;
+            color: var(--harvard-crimson-dark);
+        }
+        
+        a {
+            color: var(--harvard-crimson);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--harvard-crimson-dark);
+            border-bottom-color: var(--harvard-crimson-dark);
+        }
+        
+        .harvard-seal {
+            text-align: center;
+            color: var(--harvard-crimson);
+            font-family: "Hoefler Text", "Baskerville", serif;
+            font-style: italic;
+            margin: 20px 0;
+            font-size: 0.9em;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 20px;
+            font-size: 0.9em;
             color: #666;
+            border-top: 1px solid var(--light-gray);
+        }
+
+        footer a {
+            color: var(--harvard-crimson);
+            font-weight: 500;
+        }
+
+        .claude-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #f4f0ff;
+            border: 1px solid #e6e0ff;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        .claude-badge:hover {
+            background-color: #e6e0ff;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to MCP Test</h1>
-    <p>This is a simple test page for our repository.</p>
+    <h1>Dave Fetterman</h1>
+    <p class="contact-info">Technology Leader & Engineering Manager</p>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a technology leader with extensive experience in building and scaling engineering teams. With a background in Computer Science and Applied Mathematics from Harvard, I've spent my career working on challenging technical problems and leading teams at innovative companies.</p>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+        <p>Throughout my career, I've had the opportunity to work on diverse and impactful projects, from core infrastructure to user-facing applications. My experience includes roles at major technology companies where I've led engineering teams and driven technical initiatives.</p>
+        <div class="skills">
+            <span class="skill-tag">Engineering Leadership</span>
+            <span class="skill-tag">Technical Strategy</span>
+            <span class="skill-tag">Team Building</span>
+            <span class="skill-tag">Software Architecture</span>
+            <span class="skill-tag">System Design</span>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p>Harvard University
+        <br>S.M. Computer Science
+        <br>A.B. Applied Mathematics</p>
+        <div class="harvard-seal">Veritas</div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Interested in connecting or discussing technology? Feel free to reach out to me.</p>
+        <p class="contact-info">
+            <a href="https://github.com/fettermania">GitHub</a> |
+            Email: fettermania@gmail.com
+        </p>
+    </section>
+
+    <footer>
+        <p>Website designed and generated by 
+            <a href="https://www.anthropic.com/claude" class="claude-badge" target="_blank">
+                Claude 3.5
+            </a>
+        </p>
+    </footer>
 </body>
 </html>
